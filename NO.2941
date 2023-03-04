@@ -1,0 +1,8 @@
+data = input()
+
+rpc = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+for i in rpc:
+  data = data.replace(i, '*')
+
+ans = len(data)
+print(ans)
