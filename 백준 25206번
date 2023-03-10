@@ -25,5 +25,4 @@ for _ in range(20):
     elif c =='F':
       ans += 0.0
 
-
 print(ans/t)
