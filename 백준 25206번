@@ -1,0 +1,29 @@
+ans = 0
+t = 0
+for _ in range(20):
+  a, b, c = input().split()
+  t += int(b[0])
+  if c == 'A+':
+    ans += int(b[0]) * 4.5
+  elif c == 'A0':
+    ans += int(b[0]) * 4.0
+  elif c == 'B+':
+    ans += int(b[0]) * 3.5
+  elif c == 'B0':
+    ans += int(b[0]) * 3.0
+  elif c == 'C+':
+    ans += int(b[0]) * 2.5
+  elif c == 'C0':
+    ans += int(b[0]) * 2.0
+  elif c == 'D+':
+    ans += int(b[0]) * 1.5
+  elif c == 'D0':
+    ans += int(b[0]) * 1.0
+  else:
+    if c == 'P':
+      t -= int(b[0])
+    elif c =='F':
+      ans += 0.0
+
+
+print(ans/t)
