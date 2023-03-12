@@ -1,0 +1,13 @@
+n, m = map(int, input().split())
+data1 = []
+data2 = []
+for _ in range(n):
+  x = list(map(int, input().split()))
+  data1.append(x)
+for _ in range(n):
+  y = list(map(int, input().split()))
+  data2.append(y)
+for i in range(n):
+  for j in range(m):
+    print(data1[i][j] + data2[i][j], end = ' ')
+  print()
