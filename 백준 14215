@@ -1,0 +1,3 @@
+data = list(map(int, input().split()))
+sd = sorted(data)
+print(sd[0] + sd[1] + min(sd[2], sd[0]+sd[1]-1))
