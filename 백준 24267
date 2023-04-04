@@ -1,0 +1,8 @@
+n = int(input())
+data = n-2
+lst = list(range(1, data+1, 1))
+ans = 0
+for i in lst:
+  ans += (i*(i+1))//2
+print(ans)
+print(3)
