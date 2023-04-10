@@ -1,0 +1,10 @@
+t = int(input())
+for _ in range(t):
+  data = int(input())
+  print(data//25, end = ' ')
+  data = data%25
+  print(data//10, end = ' ')
+  data = data%10
+  print(data//5, end = ' ')
+  data = data%5
+  print(data)
