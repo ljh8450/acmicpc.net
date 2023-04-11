@@ -1,0 +1,6 @@
+n = int(input())
+x = 3
+for i in range(n-1):
+  x = x*2-1
+
+print(x**2)
