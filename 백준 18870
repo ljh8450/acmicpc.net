@@ -1,0 +1,8 @@
+from sys import stdin
+n = int(input())
+data = list(map(int, stdin.readline().split()))
+sd = sorted(set(data))
+dic = {sd[i] : i for i in range(len(sd))}
+
+for i in data:
+  print(dic[i], end = ' ')
