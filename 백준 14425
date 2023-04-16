@@ -1,0 +1,16 @@
+from sys import stdin
+n, m = map(int, stdin.readline().split())
+s = []
+for i in range(n):
+  x = stdin.readline()
+  s.append(x)
+
+print(s)
+ans = 0
+for j in range(m):
+  data = stdin.readline()
+  if data in s:
+    ans += 1
+    print(data)
+  print(data)
+print(ans)
