@@ -1,0 +1,12 @@
+from sys import stdin
+x = {}
+for _ in range(int(stdin.readline())):
+  a, b = stdin.readline().split()
+  if b == 'enter':
+    x[a] = 'enter'
+  else:
+    if x[a]:
+      del x[a]
+
+for i in sorted(x, reverse=True):
+  print(i)
