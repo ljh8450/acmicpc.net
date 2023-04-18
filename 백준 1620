@@ -1,0 +1,14 @@
+from sys import stdin
+n, m = map(int, stdin.readline().split())
+pokemon = {}
+for i in range(n):
+  data = stdin.readline().rstrip()
+  pokemon[data] = i+1
+  pokemon[i+1] = data
+  
+for j in range(m):
+  ans = stdin.readline().rstrip()
+  if ans.isdigit():
+    print(pokemon[int(ans)])
+  else:
+    print(pokemon[ans])
