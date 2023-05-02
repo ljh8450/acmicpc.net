@@ -1,0 +1,28 @@
+import sys
+import math
+inp = sys.stdin.readline
+def prime(x):
+  if x == 0 or x == 1:
+    return False
+  for i in range(2, int(math.sqrt(x))+1):
+    if x%i == 0:
+      return False
+  return True
+
+lst = list(range(2, 246912))
+temp = []
+
+for j in lst:
+  if prime(j):
+    temp.append(j)
+
+n = int(inp())
+while True:
+  cnt = 0
+  if n == 0:
+    break
+  for k in temp:
+    if n < k <= 2*n:
+      cnt += 1
+  print(cnt)
+  n = int(inp())
