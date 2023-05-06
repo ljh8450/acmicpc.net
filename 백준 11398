@@ -1,0 +1,10 @@
+from sys import stdin
+n = int(stdin.readline())
+lst = list(map(int, stdin.readline().split()))
+lst = sorted(lst)
+ans = 0
+for i in range(len(lst)):
+  for j in range(len(lst)-i):
+    ans += lst[j]
+
+print(ans)
