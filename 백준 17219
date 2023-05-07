@@ -1,0 +1,10 @@
+from sys import stdin
+n, m = map(int, stdin.readline().split())
+pw = dict()
+for _ in range(n):
+  site, ans = stdin.readline().split()
+  pw[site] = ans
+
+for _ in range(m):
+  seek = stdin.readline().strip()
+  print(pw[seek])
