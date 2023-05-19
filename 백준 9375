@@ -1,0 +1,15 @@
+from sys import stdin
+inp = stdin.readline
+t = int(inp())
+for _ in range(t):
+  n = int(inp())
+  wear = {}
+  ans = 1
+  for _ in range(n):
+    a, b = inp().split()
+    if wear.get(b) == None:
+      wear[b] = set()
+    wear[b].add(a)
+  for i in wear.keys():
+    ans *= len(wear[i])+1
+  print(ans-1)
