@@ -1,0 +1,10 @@
+from sys import stdin
+inp = stdin.readline
+
+t = int(inp())
+for _ in range(t):
+  data = [1, 1, 1, 2, 2, 3, 4, 5]
+  n = int(inp())
+  for i in range(3, n):
+    data.append(data[i]+data[i+4])
+  print(data[n-1])
