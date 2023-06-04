@@ -1,0 +1,15 @@
+from sys import stdin
+inp = stdin.readline
+ls = inp().strip().split('-')
+temp = []
+for l in ls:
+  x = 0
+  data = l.split('+')
+  for j in data:
+    x += int(j)
+  temp.append(x)
+n = temp[0]
+for k in range(1, len(temp)):
+  n -= temp[k]
+
+print(n)
