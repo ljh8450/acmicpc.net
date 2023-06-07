@@ -1,0 +1,20 @@
+from sys import stdin
+inp = stdin.readline
+n = int(inp())
+paper = [list(map(int, inp().split())) for _ in range(n)]
+ans = []
+def issquare(x, y, n):
+  color = paper[x][y]
+  for i in range(x, x+n):
+    for j in range(y, y+n):
+      if color != paper[i][j]:
+        issquare(x, y, n//2)
+        issquare(x+n//2, y, n//2)
+        issquare(x, y+n//2, n//2)
+        issquare(x+n//2, y+n//2, n//2)
+        return
+  ans.append(color)
+
+issquare(0, 0, n)
+print(ans.count(0))
+print(ans.count(1))
