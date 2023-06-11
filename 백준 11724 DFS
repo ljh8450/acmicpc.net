@@ -1,0 +1,29 @@
+import sys
+inp = sys.stdin.readline
+sys.setrecursionlimit(5000)
+
+def dfs(start, depth):
+    vs[start] = True
+    for i in graph[start]:
+        if not vs[i]:
+            dfs(i, depth+1)
+            
+n, m = map(int, inp().split())
+graph = [[] for _ in range(n+1)]
+for _ in range(m):
+    a, b = map(int, inp().split())
+    graph[a].append(b)
+    graph[b].append(a)
+    
+vs = [False] * (n+1)
+cnt = 0
+for i in range(1, n+1):
+    if not vs[i]:
+        if not graph[i]:
+            cnt += 1
+            vs[i] = True
+        else:
+            cnt += 1
+            dfs(i, 0)
+            
+print(cnt)
