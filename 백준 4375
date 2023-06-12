@@ -1,0 +1,16 @@
+from sys import stdin
+inp = stdin.readline
+while True:
+    try:    
+        n = int(inp())
+    except:
+        break
+    cnt = 1
+    data = 0
+    while True:
+        data = data*10 + 1
+        data %= n
+        if data == 0:
+            print(cnt)
+            break
+        cnt += 1
