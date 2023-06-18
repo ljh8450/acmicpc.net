@@ -1,0 +1,10 @@
+import sys
+inp = sys.stdin.readline
+t = int(inp())
+for _ in range(t):
+    data = inp().rstrip().split()
+    for i in data:
+        for j in range(len(i)):
+            print(i[len(i)-j-1], end = '')
+        print(, end = ' ')
+    print()
