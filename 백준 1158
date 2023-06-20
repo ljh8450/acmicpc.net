@@ -1,0 +1,24 @@
+import sys
+from collections import deque
+inp = sys.stdin.readline
+n, k = map(int, inp().split())
+lst = []
+for i in range(1,n+1):
+  lst.append(i)
+
+temp = len(lst)
+queue = deque()
+index = 0
+for i in range(1, temp+1):
+  while index+k-1 >= len(lst):
+    index -= len(lst)
+  queue.append(lst.pop(index+k-1))
+  index += k-1
+
+lq = list(queue)
+print('<', end = '')
+for i in range(len(lq)):
+  if i < len(lq)-1:
+    print("%d, " %lq[i], end = '')
+  else:
+    print("%d>" %lq[i])
