@@ -1,0 +1,17 @@
+import sys
+inp = sys.stdin.readline
+lst = []
+data = inp().strip()
+ans = 0
+for i in range(len(data)):
+    if data[i] == '(':
+        lst.append('(')
+    else:
+        if data[i-1] == '(':
+            lst.pop()
+            ans += len(lst)
+        else:
+            lst.pop()
+            ans += 1
+            
+print(ans)
